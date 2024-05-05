@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { GrLocationPin } from "react-icons/gr";
 
 interface Props {
   title: string;
@@ -25,7 +26,10 @@ const EventCard = ({
           <h5 className="card-title">{title}</h5>
           <p>{date}</p>
           <p className="card-text">{description}</p>
-          <p>{location}</p>
+          <div style={{ display: "flex", gap: ".6rem" }}>
+            <GrLocationPin />
+            <p>{location}</p>
+          </div>
           <a href="#" className="btn btn-primary">
             {link}
           </a>
